@@ -8,11 +8,11 @@ namespace ConsoleAppCalculadoraUsandoSuma
 {
     class Operacion
     {
-            public double _Numero1;
-            public double _Numero2;
-            public double Resultado;
-            public double multiplicar;
-            public double dividir;
+        public double _Numero1;
+        public double _Numero2;
+        public double Resultado;
+        public double multiplicar;
+        public double dividir;
 
         public double Numero1
             {
@@ -32,26 +32,27 @@ namespace ConsoleAppCalculadoraUsandoSuma
         return Resultado;
         }
 
-        public double Restar()
+        public string Restar()
         {
-            var resultado = 0;
             var resta = 0;
+
             if (Numero1 >= Numero2)
             {
                 for (int k = (int)Numero2; k < Numero1; k++)
                 { 
                 resta++;
                 }
+                return resta.ToString();
             }
             else
             {
                 for (int k = (int)Numero1; k < Numero2; k++)
                 { 
-                resta++;
+                resta++;                
                 }
+                return "-" + resta;
             }
-            resultado = resta;
-            return resultado;
+            
         }
 
         public double Multiplicar()
